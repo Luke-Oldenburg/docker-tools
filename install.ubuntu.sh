@@ -2,10 +2,10 @@
 
 # Remove conflicting packages
 sudo apt update
-sudo apt remove docker docker-engine docker.io containerd runc
+sudo apt remove docker docker-engine docker.io containerd runc -y
 
 # Install pre-requisites
-sudo apt install ca-certificates curl gnupg lsb-release
+sudo apt install ca-certificates curl gnupg lsb-release -y
 
 # Add Docker's PPA
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -15,7 +15,7 @@ echo \
 
 # Install Docker
 sudo apt update
-sudo apt install docker-compose docker-ce docker-ce-cli containerd.io
+sudo apt install docker-compose docker-ce docker-ce-cli containerd.io -y
 
 # Enable rootless mode
 sudo groupadd docker
